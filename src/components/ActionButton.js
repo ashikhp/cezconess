@@ -140,9 +140,9 @@ export default function ActionButton(props) {
             }
 
             }>
-                <Animated.View style={[styles.button, styles.other, listStyle, { backgroundColor: "#fff" }]}>
-                    <Animated.Text style={[styles.label, labelStyle]}>List</Animated.Text>
-                    <Icon name="format-list-checks" size={20} color="#398ff7" />
+                <Animated.View style={[styles.button, styles.other, listStyle, { backgroundColor: "#3599db" }]}>
+                    <Animated.Text style={[styles.label, labelStyle]}>     List</Animated.Text>
+                    <Icon name="format-list-checks" size={20} color="#fff" />
                 </Animated.View>
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback onPress={() => {
@@ -152,27 +152,27 @@ export default function ActionButton(props) {
                 )
             }
             }>
-                <Animated.View style={[styles.button, styles.other, profileStyle, { backgroundColor: "#fff" }]}>
-                    <Animated.Text style={[styles.label, labelStyle]}>Profile</Animated.Text>
-                    <Icon name="account" size={20} color="#ae39f7" />
+                <Animated.View style={[styles.button, styles.other, profileStyle, { backgroundColor: "#9b5ab8" }]}>
+                    <Animated.Text style={[styles.label, labelStyle]}>  Profile</Animated.Text>
+                    <Icon name="account" size={20} color="#fff" />
                 </Animated.View>
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback onPress={() => {
                 toggleOpen()
                 props.navigation.navigate("Settings")
             }}>
-                <Animated.View style={[styles.button, styles.other, settingsStyle, { backgroundColor: "#fff" }]}>
+                <Animated.View style={[styles.button, styles.other, settingsStyle, { backgroundColor: "#18bc9d" }]}>
                     <Animated.Text style={[styles.label, labelStyle]}>Settings</Animated.Text>
-                    <Icon name="cog-outline" size={20} color="#09e095" />
+                    <Icon name="cog-outline" size={20} color="#fff" />
                 </Animated.View>
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback onPress={() => {
                 toggleOpen()
                 props.navigation.navigate("EssMapView", { CurrentLocation: true })
             }}>
-                <Animated.View style={[styles.button, styles.other, locationStyle, { backgroundColor: "#fff" }]}>
+                <Animated.View style={[styles.button, styles.other, locationStyle, { backgroundColor: "#edc018" }]}>
                     <Animated.Text style={[styles.label, labelStyle]}>Location</Animated.Text>
-                    <Icon name="map-marker" size={20} color="#fcba03" />
+                    <Icon name="map-marker" size={20} color="#fff" />
                 </Animated.View>
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback onPress={toggleOpen}>
@@ -193,12 +193,17 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     label: {
-        color: "#FFF",
+        color: "#555",
         position: "absolute",
-        fontSize: 18,
+        fontSize: 13,
+        padding:3,
+        paddingLeft:10,
         backgroundColor: "transparent",
-        width: 70,
-        left: 10
+        width: 72,
+        left: 10,
+        backgroundColor:'#fff',
+        fontWeight:'bold',
+
     },
     button: {
         width: 60,
@@ -227,7 +232,7 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(0,0,0,.2)",
         position: "absolute",
         width: 60,
-        height: 60,
+        height: 100,
         bottom: 20,
         right: 20,
         borderRadius: 30,
