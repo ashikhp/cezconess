@@ -1,20 +1,24 @@
+import React, { useState, useEffect } from 'react';
+import { Platform, View, Text, } from 'react-native';
+import { Provider as PaperProvider } from 'react-native-paper';
+import { theme } from './src/theme';
+// import { NativeBaseProvider } from 'native-base';
+import NetInfo from "@react-native-community/netinfo";
+import App from './src/App'
+import Store from './src/store'
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { LogBox } from 'react-native';
 
-export default function App() {
+export default Main = () => {
+  LogBox.ignoreAllLogs();
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <Store>
+      {/* <NativeBaseProvider> */}
+        <StatusBar backgroundColor={"green"} />
+        <PaperProvider theme={theme}>
+          <App></App>
+        </PaperProvider>
+      {/* </NativeBaseProvider> */}
+    </Store>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

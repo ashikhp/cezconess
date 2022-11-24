@@ -1,32 +1,48 @@
 {
   "expo": {
-    "name": "cezconess",
+    "name": "CezconHRM ESS",
     "slug": "cezconess",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "orientation": "default",
+    "icon": "./assets/app-logo-hrm.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash-logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#26af4c"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "enabled": false
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.cezcon.cezconess"
+      "bundleIdentifier": "com.cezcon.cezconess",
+      "infoPlist": {
+        "NSLocationAlwaysUsageDescription": "This application uses user location to save the location where user and their attendance.",
+        "NSLocationWhenInUseUsageDescription": "This application uses user location to save the location where user and their attendance.",
+        "NSCameraUsageDescription": "This app uses camera to upload image when they add their attendance."
+      }
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+      "package": "com.cezcon.cezconess",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCbWWbHKYy1s2MOQcTMcs3G3DUJNBG_Wro"
+        }
       },
-      "package": "com.cezcon.cezconess"
+      "permissions": [
+        "ACCESS_NETWORK_STATE",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
